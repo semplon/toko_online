@@ -3,7 +3,7 @@
 foreach ($produk as $p) {
 
     ?>
-                <form class="form-group m-form__group row" action="<?php echo base_url(); ?>index.php/update_produk/action_add" method="post">
+                <form class="form-group m-form__group row" action="<?php echo base_url(); ?>index.php/produk/update/<?=$p['id_produk']; ?>" method="post">
 
                         <div class="col-lg-6">
                             <input type="text" name="name" class="form-control m-input" placeholder="masukkan nama produk"  value="<?=$p['name'];?>">
@@ -16,7 +16,10 @@ foreach ($produk as $p) {
                                     ?>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="<?=base_url();?>kategori/add" class="btn btn-sm btn-outline-success">tambah kategori</a>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                      tambah kategori
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -48,10 +51,36 @@ foreach ($produk as $p) {
                             <input type="text" name="asal_pengiriman" class="form-control m-input" placeholder=" masukkan asal" value="<?=$p['asal_pengiriman'];?>">
                         </div>
                         <div class="col-lg-6">
-                            <input type="submit" value="update" class="btn btn-success"><br>
+                            <input type="submit" value="save" name="update" class="btn btn-success"><br>
                         </div>
                 </form>
     <?php
 }
     ?>
 
+<!-- Modal -->
+<form action="" method="post">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+
+        <input type="text" name="name" placeholder="masukkan nama kategori" class="form-control"><br>
+        <?=$this->kategori_model->dropdown('', 'parent');?>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name="save">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

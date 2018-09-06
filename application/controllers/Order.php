@@ -9,10 +9,12 @@ class Order extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('city_model');
+		$this->load->model('order_model');
 	}
 	public function index()
 	{
-		$this->load->model('order_model');
+		
 		$data = array();
 		$q = $this->db->get('orders');
 		$data['order'] = $q->result_array();
@@ -28,9 +30,10 @@ class Order extends CI_Controller
 	{
 		$this->load->model('produk_model');
 		$id = $this->uri->segment(2);
+		$data['id'] = $id;
 		$data['produk'] = $this->produk_model->getId($id);
 		$this->load->view('front/header',$data);
-		$this->load->view('front/add_order',$data);
+		$this->load->view('front/order',$data);
 		$this->load->view('front/footer',$data);
 
 	}
@@ -38,10 +41,11 @@ class Order extends CI_Controller
 	public function add()
 	{
 		$this->load->model('order_model');
+		$this->load->model('city_model');
 		$data= array();
-		$this->load->view('front/header',$data);
+
 		$this->load->view('front/add_order',$data);
-		$this->load->view('front/footer',$data);
+
 	}
 
 	public function action_add()
