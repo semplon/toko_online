@@ -49,6 +49,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--RTL version:<link href="<?=base_url();?>/assets/vendors/base/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 		<link href="<?=base_url();?>/assets/demo/demo10/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
+		<link href="<?=base_url();?>/assets/js/summernote/summernote-bs4.css" rel="stylesheet" type="text/css" />
+
+
 		<!--RTL version:<link href="<?=base_url();?>/assets/demo/demo10/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 
 		<!--end::Base Styles -->
@@ -88,8 +91,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
 										<a href="dasbor" class="m-brand__logo-wrapper">
-											<img alt="" src="ssets/demo/demo10/media/img/logo/logo.png" class="m-brand__logo-desktop" />
-											<img alt="" src="ssets/demo/demo10/media/img/logo/logo.png" class="m-brand__logo-mobile" />
+											<img alt="Home" src="assets/image/logo.png" class="m-brand__logo-desktop" />
+											<img alt="Home" src="assets/image/logo.png" class="m-brand__logo-mobile" />
 										</a>
 									</div>
 									<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -403,7 +406,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<li class="m-nav__item m-dropdown m-dropdown--medium m-dropdown--arrow  m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" m-dropdown-toggle="click">
 												<a href="#" class="m-nav__link m-dropdown__toggle">
 													<span class="m-topbar__userpic">
-														<img src="assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless m--img-centered" alt="" />
+														<img src="" class="m--img-rounded m--marginless m--img-centered" alt="" />
 													</span>
 													<span class="m-nav__link-icon m-topbar__usericon  m--hide">
 														<span class="m-nav__link-icon-wrapper">
@@ -418,7 +421,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div class="m-dropdown__header m--align-center">
 															<div class="m-card-user m-card-user--skin-light">
 																<div class="m-card-user__pic">
-																	<img src="assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless" alt="" />
+																	<img src="" class="m--img-rounded m--marginless" alt="" />
 																</div>
 																<div class="m-card-user__details">
 																	<span class="m-card-user__name m--font-weight-500">Mark Andre</span>
@@ -551,6 +554,12 @@ License: You must have a valid license purchased only from themeforest(the above
 															<span class="m-menu__link-text">All Product</span>
 														</a>
 													</li>
+													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+														<a href="<?=base_url();?>kategori" class="m-menu__link ">
+															<i class="m-menu__link-icon flaticon-graphic-2"></i>
+															<span class="m-menu__link-text">Kategori</span>
+														</a>
+													</li>
 													<li class="m-menu__item  m-menu__item--actions" aria-haspopup="true">
 														<div class="m-menu__link m-menu__link--toggle-skip">
 															<a href="<?=base_url();?>produk/add" class="btn btn-accent m-btn m-btn--icon m-btn--pill">
@@ -599,9 +608,15 @@ License: You must have a valid license purchased only from themeforest(the above
 														</a>
 													</li>
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
-														<a href="builder.html" class="m-menu__link ">
+														<a href="<?=base_url();?>invoice" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-alarm-1"></i>
 															<span class="m-menu__link-text">Invoices</span>
+														</a>
+													</li>
+													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+														<a href="<?=base_url();?>bank" class="m-menu__link ">
+															<i class="m-menu__link-icon flaticon-alarm-1"></i>
+															<span class="m-menu__link-text">Bank</span>
 														</a>
 													</li>
 													<li class="m-menu__item  m-menu__item--actions" aria-haspopup="true">
@@ -686,7 +701,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span class="m-menu__arrow m-menu__arrow--adjust"></span>
 												<ul class="m-menu__subnav">
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
-														<a href="<?=base_url();?>order" class="m-menu__link ">
+														<a href="<?=base_url();?>list_orders" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-graphic-2"></i>
 															<span class="m-menu__link-text">list order</span>
 														</a>
@@ -774,7 +789,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span class="m-menu__arrow m-menu__arrow--adjust"></span>
 												<ul class="m-menu__subnav">
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
-														<a href="inner.html" class="m-menu__link ">
+														<a href="<?=base_url();?>list_orders" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-settings-1"></i>
 															<span class="m-menu__link-text">Build Tools</span>
 														</a>

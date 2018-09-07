@@ -5,9 +5,12 @@
 					
 					<form class="form-group m-form__group row" action="<?php echo base_url(); ?>order/action_add" method="post">
 						<div class="col-lg-12 text-center">
-						<h2>
+             
+                <img src="<?=base_url();?>assets/image/logo1.png"  alt="icon" class="img-fluid img-thumbnail" />
+				
+              <h2>
 							PENGIRIMAN
-						</h2>
+						  </h2>
 						</div>
 
 					</form>
@@ -155,12 +158,13 @@
             <div class="card mb-5">
                 <div class="card-header font-weight-bold bg-white"><i class="fa fa-credit-card"></i> Metode Pembayaran</div>
                 <div class="card-body">
+                  
                      <label>Silahkan pilih salah satu rekening kami di bawah ini:</label>
-                     <select class="custom-select" name="bank_id">
-                     <option value="3">MANDIRI</option></select>
+                     <?=$this->bank_model->bankDropdown('bank');?>
+                  
                 </div>
                 <div class="card-footer bg-white">
-                     <button type="submit" class="btn btn-primary">Submit Order</button>
+                     <button type="submit" name="save" class="btn btn-primary">Submit Order</button>
                 </div>
             </div>
         </div>    	
